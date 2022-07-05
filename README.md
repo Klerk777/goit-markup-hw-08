@@ -1,6 +1,6 @@
 # goit-markup-hw-01
 
-# User name = Volodymyr Bakumenko
+# Student name = Volodymyr Bakumenko
 
 # group = blended_12
 

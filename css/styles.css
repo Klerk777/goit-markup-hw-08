@@ -12,7 +12,6 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  letter-spacing: 0.03em;
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
 }
@@ -41,6 +40,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  letter-spacing: 0.03em;
   color: var(--logo-black-color);
 }
 .logo > span {
@@ -100,18 +100,22 @@ body {
 
 .features-title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
 .features-text {
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 /* ----------------- SERVICE SECTION ----------------- */
 .service-heading {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-text-color);
 }
@@ -123,18 +127,21 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-text-color);
 }
 .teammate-name {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 500;
+  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 .teammate-text {
   font-size: 16px;
   line-height: 1.19;
+  letter-spacing: 0.03em;
 }
 /* ----------------- FOOTER ----------------- */
 .footer {
@@ -143,6 +150,7 @@ body {
 .footer-contacts-link {
   font-style: normal;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--footer-contacts-color);
 }
 .address {
@@ -169,6 +177,7 @@ body {
 }
 .filter-btn:hover,
 .filter-btn:focus {
+  color: var(--primary-white-color);
   background-color: var(--btn-bg-hover);
 }
 /*  ----------------- PORTFOLIO PROJECTS ----------------- */
@@ -182,5 +191,6 @@ body {
 .portfolio-type {
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }

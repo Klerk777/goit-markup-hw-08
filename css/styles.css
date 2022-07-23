@@ -166,6 +166,10 @@ img {
   display: flex;
   gap: 30px;
 }
+.features-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
 .features-title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -259,7 +263,6 @@ img {
 }
 
 /*  ----------------- PORTFOLIO ----------------- */
-
 /*  --------------- PORTFOLIO FILTERS ------------- */
 
 .portfolio-filter-list {
@@ -299,7 +302,7 @@ img {
   border-top: none;
 }
 .portfolio-item {
-  flex-basis: calc((100%-60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 .portfolio-name {
   font-weight: 700;

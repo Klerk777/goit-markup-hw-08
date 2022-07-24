@@ -36,6 +36,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .visually-hidden {
   position: absolute;
@@ -56,11 +58,8 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 }
-.section:nth-child(2) {
-  padding-top: 94px;
-}
-.section:not(:first-child) {
-  padding-bottom: 94px;
+.section {
+  padding: 94px 0;
 }
 
 /* ------------------ LOGO ---------------- */
@@ -184,6 +183,9 @@ img {
   letter-spacing: 0.03em;
 }
 /* ----------------- SERVICE SECTION ----------------- */
+.service-section {
+  padding-top: 0;
+}
 .service-list {
   display: flex;
   gap: 30px;
@@ -212,7 +214,6 @@ img {
 }
 .team-heading {
   margin-bottom: 50px;
-  padding-top: 94px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -220,8 +221,11 @@ img {
   text-align: center;
   color: var(--secondary-text-color);
 }
+.teammate-content {
+  padding: 30px 0;
+}
 .teammate-name {
-  margin: 30px 0 10px;
+  margin-bottom: 10px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -230,7 +234,6 @@ img {
   color: var(--secondary-text-color);
 }
 .teammate-text {
-  margin-bottom: 30px;
   text-align: center;
   font-size: 16px;
   line-height: 1.19;
@@ -242,7 +245,7 @@ img {
   padding: 60px 0;
   background-color: var(--primary-bg-color);
 }
-.footer-contacts-list {
+.footer-contacts {
   margin-top: 20px;
 }
 .footer-contacts-item:not(:last-child) {
@@ -305,6 +308,7 @@ img {
   flex-basis: calc((100% - 60px) / 3);
 }
 .portfolio-name {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;

@@ -194,10 +194,11 @@ img {
 }
 .features-icon-wrap {
   display: flex;
-  height: 120px;
-  margin-bottom: 30px;
   justify-content: center;
   align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
   background-color: var(--secondary-bg-color);
 }
 

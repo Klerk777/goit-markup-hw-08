@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -27,7 +28,7 @@
       <div class="container contacts-container">
         <nav class="header-nav">
           <!-- prettier-ignore -->
-          <a class="logo link" lang="en" href="./index.html"><span>Web</span>Studio</a>
+          <a class="logo link animate__animated animate__bounce" lang="en" href="./index.html"><span>Web</span>Studio</a>
           <ul class="header-nav-list list">
             <li class="header-nav-item"><a class="header-nav-link link current" href="./index.html">Студія</a></li>
             <li class="header-nav-item"><a class="header-nav-link link" href="./portfolio.html">Портфоліо</a></li>
@@ -58,7 +59,7 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-heading">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!--========== FEATURES SECTION ==========-->
@@ -382,5 +383,15 @@
         </div>
       </div>
     </footer>
+    <!--================= MODAL ==========-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="close-icon" width="18" height="18"><use href="./img/sprite.svg#close-black-btn"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

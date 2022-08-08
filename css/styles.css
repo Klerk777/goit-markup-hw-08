@@ -15,7 +15,7 @@
   --box-shadow: rgba(0, 0, 0, 0.25);
   --icon-color: #afb1b8;
   /* ------------------ OTHER ---------------- */
-  --dur-time: 1000ms;
+  --dur-time: 250ms;
   --bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 

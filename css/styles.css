@@ -606,10 +606,10 @@ img {
   pointer-events: none;
 }
 
-.close-btn:hover,
+/* .close-btn:hover,
 .close-btn:focus {
   border-color: var(--site-accent-color);
-}
+} */
 .close-btn:hover > .close-icon,
 .close-btn:focus > .close-icon {
   fill: var(--site-accent-color);

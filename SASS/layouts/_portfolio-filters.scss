@@ -1,0 +1,29 @@
+/*  ------------- PORTFOLIO FILTERS ------------- */
+
+.portfolio__filter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.portfolio__filter-btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-bg-color);
+  cursor: pointer;
+  transition: color var(--dur-time) var(--bezier), background-color var(--dur-time) var(--bezier),
+    filter var(--dur-time) var(--bezier);
+}
+.portfolio__filter-btn:hover,
+.portfolio__filter-btn:focus {
+  color: var(--primary-white-color);
+  background-color: var(--btn-bg-hover);
+  filter: drop-shadow(0px 4px 4px var(--box-shadow));
+}

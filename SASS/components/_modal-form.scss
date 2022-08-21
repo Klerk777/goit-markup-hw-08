@@ -2,12 +2,11 @@
 .form {
   display: flex;
   flex-direction: column;
+
   /*  ----------------- inputs ---------------- */
   &__label {
     margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include fonts(400, 12, 14, 0.01);
     color: var(--primary-text-color);
   }
   &__input-wrap {
@@ -44,13 +43,11 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
-    transition: border var(--dur-time) var(--bezier);
+    @include transition(border);
     outline: 0;
   }
   &__text::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include fonts(400, 12, 14, 0.01);
     color: rgba(117, 117, 117, 0.5);
   }
   &__text:focus {
@@ -60,39 +57,38 @@
 /*  ----------------- checkbox ---------------- */
 
 .checkbox {
-  @extend flexed;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
+  @extend %flexed;
+  @include fonts(400, 14, 24, 0.03);
   color: var(--primary-text-color);
-}
-&__input {
-  appearance: none;
-  position: absolute;
-}
-&__icon {
-  fill: var(--primary-white-color);
-}
-&__custom-input {
-  @extend flexed;
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 2px solid var(--secondary-text-color);
-  border-radius: 2px;
-  outline: 0;
-  @include transition(background-color);
-  @include transition(border);
-}
-&__input:focus + &__custom-input {
-  border-color: var(--site-accent-color);
-}
 
-&__input:checked + &__custom-input {
-  border: 0;
-  background-color: var(--site-accent-color);
-}
+  &__input {
+    appearance: none;
+    position: absolute;
+  }
+  &__icon {
+    fill: var(--primary-white-color);
+  }
+  &__custom-input {
+    @extend %flexed;
 
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+    outline: 0;
+    @include transition(background-color);
+    @include transition(border);
+  }
+  &__input:focus + &__custom-input {
+    border-color: var(--site-accent-color);
+  }
+
+  &__input:checked + &__custom-input {
+    border: 0;
+    background-color: var(--site-accent-color);
+  }
+}
 .form__btn {
   margin: 30px auto 0;
 }

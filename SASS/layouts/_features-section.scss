@@ -8,9 +8,7 @@
   flex-basis: calc((100% - 90px) / 4);
 }
 .features__icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flexed;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -18,14 +16,9 @@
 }
 .features__title {
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  @include fonts(700, 14, 16, 0.03, uppercase);
   color: var(--secondary-text-color);
 }
 .features__text {
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include fonts(null, 14, 24, 0.03);
 }

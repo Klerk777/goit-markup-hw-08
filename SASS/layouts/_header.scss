@@ -2,10 +2,11 @@
 
 .page-header {
   border-bottom: 1px solid var(--border-color);
-}
-.page-header__container {
-  display: flex;
-  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /* -------Site nav------- */
@@ -13,68 +14,63 @@
 .site-nav {
   display: flex;
   align-items: center;
-}
-.site-nav__list {
-  display: flex;
-  gap: 50px;
-  margin-left: 92px;
-}
-.site-nav__link {
-  display: block;
-  padding: 32px 0px;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  transition: color var(--dur-time) var(--bezier);
-}
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--site-accent-color);
-}
-.site-nav__link--current {
-  color: var(--site-accent-color);
-}
-.site-nav__item {
-  position: relative;
-}
-.site-nav__link--current::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 4px;
-  width: 100%;
+  &__list {
+    display: flex;
+    gap: 50px;
+    margin-left: 92px;
+  }
+  &__link {
+    display: block;
+    padding: 32px 0px;
+    @include fonts(500, 14, 16, 0.02);
+    color: var(--secondary-text-color);
+    @include transition(color);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--site-accent-color);
+  }
+  &__link--current {
+    color: var(--site-accent-color);
+  }
+  &__item {
+    position: relative;
+  }
+  &__link--current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 4px;
+    width: 100%;
 
-  background-color: var(--site-accent-color);
-  box-shadow: 0px 4px 4px var(--box-shadow);
-  border-radius: 2px;
+    background-color: var(--site-accent-color);
+    box-shadow: 0px 4px 4px var(--box-shadow);
+    border-radius: 2px;
+  }
 }
-
 /* -------Header contacts------- */
 
 .header-contacts {
   display: flex;
   gap: 50px;
-}
-.header-contacts__link {
-  display: inline-flex;
-  align-items: center;
-  padding: 32px 0px;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 32px 0px;
 
-  transition: color var(--dur-time) var(--bezier);
-}
-.header-contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-.header-contacts__link:hover,
-.header-contacts__link:focus {
-  color: var(--site-accent-color);
+    @include fonts(500, 14, 16, 0.02);
+    color: var(--primary-text-color);
+    transition: color var(--dur-time) var(--bezier);
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--site-accent-color);
+  }
 }

@@ -1,9 +1,6 @@
 .section-heading {
+  @include fonts(700, 36, 42, 0.03);
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-text-color);
 }

@@ -1,8 +1,8 @@
 @mixin fonts($fw, $fs, $lh, $ls, $tt: false) {
   font-weight: $fw;
-  font-size: $fs;
+  font-size: $fs + px;
   line-height: setLineHeight($lh, $fs);
-  letter-spacing: $ls;
+  letter-spacing: $ls + em;
 
   @if $tt {
     text-transform: $tt;

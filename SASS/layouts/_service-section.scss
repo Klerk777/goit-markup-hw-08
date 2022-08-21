@@ -1,0 +1,26 @@
+/* ----------------- SERVICE SECTION ----------------- */
+.service {
+  padding-top: 0;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    @extend %flexed;
+
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    background: rgba(47, 48, 58, 0.8);
+  }
+}

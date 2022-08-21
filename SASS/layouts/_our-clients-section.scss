@@ -1,0 +1,22 @@
+/* ----------------- OUR CLIENTS SECTION ----------------- */
+
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+  transition: border-color var(--dur-time) var(--bezier), fill var(--dur-time) var(--bezier);
+}
+.clients__link:hover,
+.clients__link:focus {
+  border-color: var(--site-accent-color);
+  fill: var(--site-accent-color);
+}

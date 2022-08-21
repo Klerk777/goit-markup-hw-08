@@ -1,6 +1,6 @@
 /* ------------------ VAR ---------------- */
 :root {
-  /* ------------------ VAR ---------------- */
+  /* ------------------ COLORS ---------------- */
   --site-accent-color: #2196f3;
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -14,9 +14,24 @@
   --footer-icon-bg: rgba(255, 255, 255, 0.1);
   --box-shadow: rgba(0, 0, 0, 0.25);
   --icon-color: #afb1b8;
-  /* ------------------ OTHER ---------------- */
+  /* ------------------ TRANSITION ---------------- */
   --dur-time: 250ms;
   --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  /* ------------------ FONTS ---------------- */
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+}
+
+.service__text, .close-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body {
@@ -144,7 +159,6 @@ img {
   -webkit-transition: opacity var(--dur-time) var(--bezier);
   transition: opacity var(--dur-time) var(--bezier);
 }
-
 .backdrop--hidden {
   opacity: 0;
   pointer-events: none;
@@ -163,12 +177,15 @@ img {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform var(--dur-time) var(--bezier);
-  transition: -webkit-transform var(--dur-time) var(--bezier);
-  transition: transform var(--dur-time) var(--bezier);
-  transition: transform var(--dur-time) var(--bezier), -webkit-transform var(--dur-time) var(--bezier);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -188,15 +205,6 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 30px;
   height: 30px;
   padding: 0;
@@ -206,17 +214,22 @@ img {
   background: inherit;
   outline: 0;
   cursor: pointer;
-  -webkit-transition: border var(--dur-time) var(--bezier);
-  transition: border var(--dur-time) var(--bezier);
+  -webkit-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .close-btn__icon {
-  -webkit-transition: fill var(--dur-time) var(--bezier);
-  transition: fill var(--dur-time) var(--bezier);
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:hover, .close-btn:focus {
   border-color: var(--site-accent-color);
   fill: var(--site-accent-color);
 }
@@ -230,9 +243,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*  ----------------- inputs ---------------- */
 }
-
-/*  ----------------- inputs ---------------- */
 .form__label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -240,12 +252,10 @@ img {
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
-
 .form__input-wrap {
   position: relative;
   margin-bottom: 10px;
 }
-
 .form__input {
   height: 40px;
   width: 100%;
@@ -254,7 +264,6 @@ img {
   border-radius: 4px;
   outline: 0;
 }
-
 .form__icon {
   position: absolute;
   left: 12px;
@@ -262,16 +271,13 @@ img {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
 .form__input:focus {
   border-color: var(--site-accent-color);
 }
-
-.form__input-wrap:focus-within .form__icon {
+.form .form__input-wrap:focus-within .form__icon {
   fill: var(--site-accent-color);
 }
-
-.form__text {
+.form .form__text {
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
@@ -282,43 +288,37 @@ img {
   transition: border var(--dur-time) var(--bezier);
   outline: 0;
 }
-
-.form__text::-webkit-input-placeholder {
+.form .form__text::-webkit-input-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form__text::-moz-placeholder {
+.form .form__text::-moz-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form__text:-ms-input-placeholder {
+.form .form__text:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form__text::-ms-input-placeholder {
+.form .form__text::-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form__text::placeholder {
+.form .form__text::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form__text:focus {
+.form .form__text:focus {
   border-color: var(--site-accent-color);
 }
 
@@ -561,27 +561,16 @@ img {
 .service {
   padding-top: 0;
 }
-
 .service__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
-
 .service__text {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 70px;
   font-weight: 700;

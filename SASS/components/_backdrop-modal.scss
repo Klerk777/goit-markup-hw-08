@@ -7,10 +7,11 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.4);
   transition: opacity var(--dur-time) var(--bezier);
-}
-.backdrop--hidden {
-  opacity: 0;
-  pointer-events: none;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -27,16 +28,17 @@
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--dur-time) var(--bezier);
-}
-.modal__title {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  @include transition(transform);
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+  }
 }
 
 .backdrop--hidden .modal {
@@ -47,9 +49,7 @@
   top: 8px;
   right: 8px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flexed;
 
   width: 30px;
   height: 30px;
@@ -62,13 +62,14 @@
   outline: 0;
   cursor: pointer;
 
-  transition: border var(--dur-time) var(--bezier);
-}
-.close-btn__icon {
-  transition: fill var(--dur-time) var(--bezier);
-}
-.close-btn:hover,
-.close-btn:focus {
-  border-color: var(--site-accent-color);
-  fill: var(--site-accent-color);
+  @include transition(border);
+
+  &__icon {
+    @include transition(fill);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--site-accent-color);
+    fill: var(--site-accent-color);
+  }
 }

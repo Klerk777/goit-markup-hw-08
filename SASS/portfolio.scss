@@ -1,5 +1,7 @@
 // --- base & utils ---
-@import "./utils/vars";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/placeholders";
 @import "./base/reset";
 @import "./base/common";
 @import "./utils/visually-hidden";

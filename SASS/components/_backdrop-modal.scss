@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  transition: opacity var(--dur-time) var(--bezier);
+  @include transition(opacity);
 
   &--hidden {
     opacity: 0;
@@ -32,11 +32,8 @@
 
   &__title {
     margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
+    @include fonts(700, 20, 23, 0.03);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--secondary-text-color);
   }
 }

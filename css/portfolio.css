@@ -22,7 +22,7 @@
   --font-secondary: "Raleway", sans-serif;
 }
 
-.footer-form__btn, .footer-social__link, .portfolio__filter {
+.footer-form__btn, .footer-social__link, .portfolio__filter, .scroll-to-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +98,14 @@ img {
   margin: -1px;
 }
 
+@keyframes slide-top {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
 /* ------------------ LOGO ---------------- */
 .logo {
   font-family: var(--font-secondary);
@@ -136,6 +144,26 @@ img {
 }
 .btn:hover, .btn:focus {
   background-color: var(--btn-bg-hover);
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--site-accent-color);
+  animation: slide-top 1s linear 2s infinite alternate both;
+}
+.scroll-to-top__icon {
+  fill: var(--primary-white-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.scroll-to-top:hover .scroll-to-top__icon {
+  fill: var(--secondary-text-color);
 }
 
 /* ------------------ HEADER ---------------- */

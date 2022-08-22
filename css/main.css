@@ -22,7 +22,7 @@
   --font-secondary: "Raleway", sans-serif;
 }
 
-.footer-form__btn, .footer-social__link, .clients__link, .team__social-link, .team__social-list, .service__text, .features__icon-wrap, .checkbox__custom-input, .checkbox, .close-btn {
+.footer-form__btn, .footer-social__link, .clients__link, .team__social-link, .team__social-list, .service__text, .features__icon-wrap, .scroll-to-top, .checkbox__custom-input, .checkbox, .close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +98,14 @@ img {
   margin: -1px;
 }
 
+@keyframes slide-top {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
 /* ------------------ LOGO ---------------- */
 .logo {
   font-family: var(--font-secondary);
@@ -311,6 +319,26 @@ img {
 
 .form__btn {
   margin: 30px auto 0;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--site-accent-color);
+  animation: slide-top 1s linear 2s infinite alternate both;
+}
+.scroll-to-top__icon {
+  fill: var(--primary-white-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.scroll-to-top:hover .scroll-to-top__icon {
+  fill: var(--secondary-text-color);
 }
 
 /* ------------------ HEADER ---------------- */

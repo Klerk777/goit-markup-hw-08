@@ -5,10 +5,13 @@
 @import "./base/reset";
 @import "./base/common";
 @import "./utils/visually-hidden";
+@import "./base/annimations";
 
 // --- components ---
 @import "./components/logo";
 @import "./components/btn";
+@import "./components/scroll-to-top";
+
 // --- layouts ---
 @import "./layouts/header";
 @import "./layouts/portfolio-filters";

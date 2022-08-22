@@ -6,6 +6,7 @@
   height: 48px;
   @extend %flexed;
   border-radius: 50%;
+  opacity: 0.85;
   background-color: var(--site-accent-color);
   animation: slide-top 1s linear 2s infinite alternate both;
 

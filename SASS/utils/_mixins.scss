@@ -60,11 +60,18 @@
   }
 }
 
-@mixin transition($property) {
+@mixin transition($property, $sproperty: false, $tproperty: false) {
   $duration: 250ms;
   $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  transition-property: $property;
-  transition-duration: $duration;
-  transition-timing-function: $timing-function;
+  @if $sproperty {
+    @if $tproperty {
+      transition: $property $duration $timing-function, $sproperty $duration $timing-function,
+        $tproperty $duration $timing-function;
+    } @else {
+      transition: $property $duration $timing-function, $sproperty $duration $timing-function;
+    }
+  } @else {
+    transition: $property $duration $timing-function;
+  }
 }

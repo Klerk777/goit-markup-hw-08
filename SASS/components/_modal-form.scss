@@ -20,6 +20,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: 0;
+    @include transition(border-color);
   }
 
   &__icon {
@@ -27,6 +28,7 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    @include transition(fill);
   }
   &__input:focus {
     border-color: var(--site-accent-color);
@@ -77,8 +79,7 @@
     border: 2px solid var(--secondary-text-color);
     border-radius: 2px;
     outline: 0;
-    @include transition(background-color);
-    @include transition(border);
+    @include transition(background-color, border);
   }
   &__input:focus + &__custom-input {
     border-color: var(--site-accent-color);

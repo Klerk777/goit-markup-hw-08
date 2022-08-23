@@ -16,9 +16,7 @@
   background-color: var(--secondary-bg-color);
 
   cursor: pointer;
-  @include transition(color);
-  @include transition(background-color);
-  @include transition(filter);
+  @include transition(color, background-color, filter);
 
   &:hover,
   &:focus {

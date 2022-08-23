@@ -11,8 +11,7 @@
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     fill: var(--icon-color);
-    @include transition(border-color);
-    @include transition(fill);
+    @include transition(border-color, fill);
   }
   &__link:hover,
   &__link:focus {

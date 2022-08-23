@@ -26,10 +26,11 @@
     @include fonts(500, 14, 16, 0.02);
     color: var(--secondary-text-color);
     @include transition(color);
-  }
-  &__link:hover,
-  &__link:focus {
-    color: var(--site-accent-color);
+
+    &:hover,
+    &:focus {
+      color: var(--site-accent-color);
+    }
   }
   &__link--current {
     color: var(--site-accent-color);
@@ -63,7 +64,7 @@
 
     @include fonts(500, 14, 16, 0.02);
     color: var(--primary-text-color);
-    transition: color var(--dur-time) var(--bezier);
+    @include transition(color);
   }
   &__icon {
     margin-right: 10px;

@@ -1,9 +1,8 @@
 /* ----------------- OUR CLIENTS SECTION ----------------- */
 .clients {
-  &__list {
-    display: flex;
-    gap: 30px;
-  }
+  display: flex;
+  gap: 30px;
+
   &__link {
     @extend %flexed;
     width: 170px;
@@ -12,10 +11,11 @@
     border-radius: 4px;
     fill: var(--icon-color);
     @include transition(border-color, fill);
-  }
-  &__link:hover,
-  &__link:focus {
-    border-color: var(--site-accent-color);
-    fill: var(--site-accent-color);
+
+    &:hover,
+    &:focus {
+      border-color: var(--site-accent-color);
+      fill: var(--site-accent-color);
+    }
   }
 }

@@ -1,11 +1,7 @@
 /* ----------------- SERVICE SECTION ----------------- */
 .service {
-  padding-top: 0;
-
-  &__list {
-    display: flex;
-    gap: 30px;
-  }
+  display: flex;
+  gap: 30px;
 
   &__text {
     position: absolute;

@@ -1,24 +1,25 @@
 /* ----------------- FEATURES SECTION ----------------- */
 
-.features__list {
+.features {
   display: flex;
   gap: 30px;
-}
-.features__item {
-  flex-basis: calc((100% - 90px) / 4);
-}
-.features__icon-wrap {
-  @extend %flexed;
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  background-color: var(--secondary-bg-color);
-}
-.features__title {
-  margin-bottom: 10px;
-  @include fonts(700, 14, 16, 0.03, uppercase);
-  color: var(--secondary-text-color);
-}
-.features__text {
-  @include fonts(null, 14, 24, 0.03);
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  &__icon-wrap {
+    @extend %flexed;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--secondary-bg-color);
+  }
+  &__title {
+    margin-bottom: 10px;
+    @include fonts(700, 14, 16, 0.03, uppercase);
+    color: var(--secondary-text-color);
+  }
+  &__text {
+    @include fonts(null, 14, 24, 0.03);
+  }
 }

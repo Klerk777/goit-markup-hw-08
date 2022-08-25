@@ -19,9 +19,6 @@
 }
 /* ---------- Adress & contacts -------- */
 
-.address {
-  color: var(--primary-white-color);
-}
 .footer-contacts {
   margin-top: 20px;
 
@@ -33,10 +30,14 @@
     @include fonts(null, 14, 24, 0.03);
     color: var(--footer-contacts-color);
     @include transition(color);
-  }
-  &__link:hover,
-  &__link:focus {
-    color: var(--site-accent-color);
+
+    &:hover,
+    &:focus {
+      color: var(--site-accent-color);
+    }
+    &--white {
+      color: var(--primary-white-color);
+    }
   }
 }
 
@@ -58,10 +59,11 @@
     background-color: var(--footer-icon-bg);
     fill: var(--primary-white-color);
     @include transition(background-color);
-  }
-  &__link:hover,
-  &__link:focus {
-    background-color: var(--site-accent-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--site-accent-color);
+    }
   }
 }
 
@@ -83,6 +85,10 @@
     color: var(--primary-white-color);
     background: var(--primary-bg-color);
     @include transition(border);
+
+    &:focus {
+      border: 2px solid rgba(255, 255, 255, 0.6);
+    }
   }
 
   &__label {
@@ -93,18 +99,13 @@
     @include fonts(null, 16, 20, 0.03);
     color: rgba(255, 255, 255, 0.6);
     @include transition(transform, color);
-  }
 
-  &__input:focus {
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    .footer-form__input:focus + &,
+    .footer-form__input:not(:placeholder-shown) + & {
+      transform: translate(-70px, 11px);
+      color: var(--secondary-bg-color);
+    }
   }
-
-  &__input:focus + &__label,
-  &__input:not(:placeholder-shown) + &__label {
-    transform: translate(-70px, 11px);
-    color: var(--secondary-bg-color);
-  }
-
   &__btn {
     @extend %flexed;
   }

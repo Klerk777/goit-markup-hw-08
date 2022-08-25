@@ -12,7 +12,7 @@
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px var(--box-shadow);
 
-  &__heading {
+  &__title {
     width: 696px;
     margin: 0 auto 30px;
     @include fonts(900, 44, 60, 0.06, uppercase);

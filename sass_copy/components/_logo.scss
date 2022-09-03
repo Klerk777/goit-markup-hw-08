@@ -1,0 +1,13 @@
+/* ------------------ LOGO ---------------- */
+.logo {
+  font-family: var(--font-secondary);
+  @include fonts(700, 26, 31, 0.03);
+  color: var(--logo-black-color);
+
+  &__accent {
+    color: var(--site-accent-color);
+  }
+}
+.footer__logo {
+  color: var(--primary-white-color);
+}

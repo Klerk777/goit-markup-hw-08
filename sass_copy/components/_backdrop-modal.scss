@@ -20,6 +20,9 @@
   left: 50%;
   padding: 40px;
 
+  min-width: 528px;
+  min-height: 581px;
+
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -27,23 +30,9 @@
   transform: translate(-50%, -50%) scale(1);
   @include transition(transform);
 
-  @include mq(pre-mob) {
-    right: -30%;
-    padding: 30px 20px 20px;
-    min-width: 240px;
-  }
-  @include mq(mob) {
-    width: 450px;
-    height: 609px;
-  }
-  @include mq(desk) {
-    min-width: 528px;
-    min-height: 581px;
-  }
-
   &__title {
     margin-bottom: 12px;
-    @include fonts(700, 20, 30, 0.03);
+    @include fonts(700, 20, 23, 0.03);
     text-align: center;
     color: var(--secondary-text-color);
   }
@@ -54,8 +43,8 @@
 }
 .close-btn {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 8px;
+  right: 8px;
 
   @extend %flexed;
 
@@ -65,17 +54,11 @@
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  position: top 8px, right 8px;
   background: inherit;
   outline: 0;
   cursor: pointer;
 
   @include transition(border);
-
-  @include mq(mob) {
-    top: 8px;
-    right: 8px;
-  }
 
   &__icon {
     @include transition(fill);

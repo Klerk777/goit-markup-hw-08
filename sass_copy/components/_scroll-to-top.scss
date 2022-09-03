@@ -1,0 +1,25 @@
+.scroll-to-top {
+  position: fixed;
+  right: 32px;
+  bottom: 48px;
+  width: 48px;
+  height: 48px;
+  @extend %flexed;
+  border-radius: 50%;
+  opacity: 0.85;
+  background-color: var(--site-accent-color);
+  animation: slide-top 1s linear 2s infinite alternate both;
+  @include transition(opacity);
+
+  &:hover {
+    opacity: 1;
+  }
+  &__icon {
+    fill: var(--primary-white-color);
+    @include transition(fill);
+  }
+
+  &:hover &__icon {
+    fill: var(--secondary-text-color);
+  }
+}

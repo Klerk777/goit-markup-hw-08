@@ -1,16 +1,11 @@
 /* ----------------- OUR CLIENTS SECTION ----------------- */
 .clients {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 
-  &.team__item {
-    flex-basis: 50%;
-  }
   &__link {
     @extend %flexed;
-    width: 210px;
+    width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
@@ -21,14 +16,6 @@
     &:focus {
       border-color: var(--site-accent-color);
       fill: var(--site-accent-color);
-    }
-
-    @media screen and (max-width: 479px), (min-width: 768px) {
-      width: 226px;
-    }
-
-    @include mq(desk) {
-      width: 170px;
     }
   }
 }

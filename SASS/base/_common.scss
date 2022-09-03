@@ -1,21 +1,35 @@
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include mq(mob) {
+    width: 480px;
+  }
+  @include mq(tab) {
+    width: 768px;
+  }
+  @include mq(desk) {
+    width: 1200px;
+  }
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @include mq(desk) {
+    padding: 94px 0;
+  }
 
   &__title {
-    @include fonts(700, 36, 42, 0.03);
+    @include fonts(700, 28, 33, 0.03);
     margin-bottom: 50px;
     text-align: center;
     color: var(--secondary-text-color);
+
+    @include mq(desk) {
+      @include fonts(null, 36, 42);
+    }
   }
 
-  &--no-pading {
-    padding-top: 0;
-  }
   &--alt-bg {
     background-color: var(--secondary-bg-color);
   }

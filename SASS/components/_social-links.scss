@@ -1,0 +1,20 @@
+/* ----------------- SOCIAL LINKS ----------------- */
+.social-list {
+  @extend %flexed;
+  gap: 10px;
+
+  &__link {
+    @extend %flexed;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-color);
+    @include transition(background-color, fill);
+
+    &:hover,
+    &:focus {
+      background-color: var(--site-accent-color);
+      fill: var(--primary-white-color);
+    }
+  }
+}

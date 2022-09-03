@@ -1,11 +1,28 @@
 /* ----------------- FEATURES SECTION ----------------- */
 
 .features {
-  display: flex;
-  gap: 30px;
+  @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
 
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+      @include mq(mob-only) {
+        margin-bottom: 30px;
+      }
+    }
+    @include mq(tab-only) {
+      flex-basis: calc((100% - 30px) / 2);
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 57px;
+      }
+    }
+    @include mq(desk) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
   &__icon-wrap {
     @extend %flexed;
@@ -18,6 +35,10 @@
     margin-bottom: 10px;
     @include fonts(700, 14, 16, 0.03, uppercase);
     color: var(--secondary-text-color);
+
+    @include mq(mob-only) {
+      text-align: center;
+    }
   }
   &__text {
     @include fonts(null, 14, 24, 0.03);

@@ -5,34 +5,16 @@
   background-color: var(--primary-bg-color);
 
   &__wrap {
-    @include mq(tab) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-around;
-    }
-    @include mq(desk) {
-      justify-content: space-between;
-    }
+    display: flex;
+    align-items: baseline;
   }
-
   &__heading {
     margin-bottom: 20px;
     @include fonts(700, 14, 16, 0.03, uppercase);
-    text-align: center;
     color: var(--primary-white-color);
-
-    @include mq(desk) {
-      text-align: start;
-    }
   }
-
   &__address-wrap {
-    text-align: center;
-
-    @include mq(desk) {
-      text-align: start;
-    }
+    flex-grow: 1;
   }
 }
 /* ---------- Adress & contacts -------- */
@@ -62,16 +44,13 @@
 /* --------- Social links -------- */
 
 .footer-social {
-  @include mq(mob-only) {
-    margin: 60px auto;
-  }
+  margin-left: 70px;
+  margin-right: 93px;
 
   &__list {
     display: flex;
-    justify-content: center;
     gap: 10px;
   }
-
   &__link {
     @extend %flexed;
     width: 44px;
@@ -91,36 +70,15 @@
 /* ---------- Footer sign up form -------- */
 
 .footer-form {
-  $this: &;
-
-  @include mq(desk) {
-    display: flex;
-    gap: 10px;
-  }
-
-  &__wrap {
-    @include mq(tab-only) {
-      margin-top: 60px;
-    }
-  }
-
-  &__input-container {
-    position: relative;
-    width: 100%;
-    // text-align: center;
-
-    @include mq(mob) {
-      width: 450px;
-    }
-
-    @include mq(desk) {
-      width: 358px;
-    }
-  }
+  display: flex;
+  position: relative;
 
   &__input {
+    width: 358px;
     height: 50px;
-    padding: 0 15px;
+    padding-left: 16px;
+    padding-right: 0;
+    margin-right: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -131,46 +89,25 @@
     &:focus {
       border: 2px solid rgba(255, 255, 255, 0.6);
     }
-
-    @include mq(pre-mob) {
-      width: 100%;
-    }
-    @include mq(mob) {
-      width: 450px;
-    }
-    @include mq(desk) {
-      width: 358px;
-    }
   }
 
   &__label {
     position: absolute;
-    left: 15px;
-    top: 15px;
-    // transform: translateY(50%);
+    left: 16px;
+    bottom: 50%;
+    transform: translateY(50%);
     @include fonts(null, 16, 20, 0.03);
     color: rgba(255, 255, 255, 0.6);
     @include transition(transform, color);
 
-    #{$this}__input:focus + &,
-    #{$this}__input:not(:placeholder-shown) + & {
-      transform: translate(-15px, -36px);
+    .footer-form__input:focus + &,
+    .footer-form__input:not(:placeholder-shown) + & {
+      transform: translate(-70px, 11px);
       color: var(--secondary-bg-color);
-
-      @include mq(pre-mob) {
-        transform: translate(-18px, -32px) scale(0.8);
-      }
-      @include mq(tab) {
-        transform: translateX(-70px);
-      }
     }
   }
   &__btn {
     @extend %flexed;
-
-    @include mq(not-desk) {
-      margin: 20px auto 0;
-    }
   }
 
   &__btn-icon {

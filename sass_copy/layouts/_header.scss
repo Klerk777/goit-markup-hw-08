@@ -4,49 +4,21 @@
   border-bottom: 1px solid var(--border-color);
 
   &__container {
-    height: 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    @include mq(mob-only) {
-      height: 60px;
-    }
   }
 }
-/* -------Header menu------- */
-.menu-btn {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
 
-  @include transition(transform);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
-
-  @include mq(tab) {
-    display: none;
-  }
-}
 /* -------Site nav------- */
 
 .site-nav {
-  display: none;
-
-  @include mq(tab) {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 
   &__list {
     display: flex;
     gap: 50px;
+    margin-left: 92px;
   }
   &__link {
     display: block;
@@ -82,32 +54,17 @@
 /* -------Header contacts------- */
 
 .header-contacts {
-  display: none;
-
-  @include mq(tab) {
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-  }
-
-  @include mq(desk) {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-  }
+  display: flex;
+  gap: 50px;
 
   &__link {
     display: inline-flex;
     align-items: center;
-    padding: 5px 0px;
+    padding: 32px 0px;
 
     @include fonts(500, 14, 16, 0.02);
     color: var(--primary-text-color);
     @include transition(color);
-
-    @include mq(desk) {
-      padding: 5px 0px;
-    }
   }
   &__icon {
     margin-right: 10px;

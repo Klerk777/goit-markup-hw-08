@@ -13,14 +13,10 @@
   box-shadow: 0px 4px 4px var(--box-shadow);
 
   &__title {
+    width: 696px;
     margin: 0 auto 30px;
-    @include fonts(900, 26, 42, 0.06, uppercase);
+    @include fonts(900, 44, 60, 0.06, uppercase);
     color: var(--primary-white-color);
-
-    @include mq(desk) {
-      @include fonts(null, 44, 60);
-      width: 696px;
-    }
   }
   &__btn {
     @include mq(desk) {

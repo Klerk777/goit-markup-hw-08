@@ -1,11 +1,4 @@
 /* ----------------- SERVICE SECTION ----------------- */
-.service-section {
-  padding-top: 0;
-
-  @include mq(not-desk) {
-    display: none;
-  }
-}
 .service {
   display: flex;
   gap: 30px;

@@ -13,6 +13,11 @@
   ],
   "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**"],
   "liveSassCompile.settings.generateMap": true,
-  "liveSassCompile.settings.autoprefix": null
+  "liveSassCompile.settings.autoprefix": null,
   // "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+
+  "cssVarriablesAutocomplete.files": ["../sass/utils/_variables.scss"],
+  "cssVarriablesAutocomplete.languageModes": ["css", "scss", "postcss"],
+
+  "scss.showErrors": true
 }

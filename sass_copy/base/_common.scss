@@ -1,0 +1,26 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding: 94px 0;
+
+  &__title {
+    @include fonts(700, 36, 42, 0.03);
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--secondary-text-color);
+  }
+
+  &--no-pading {
+    padding-top: 0;
+  }
+  &--alt-bg {
+    background-color: var(--secondary-bg-color);
+  }
+}
+.img-box {
+  position: relative;
+  overflow: hidden;
+}

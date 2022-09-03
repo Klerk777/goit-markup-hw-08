@@ -1,45 +1,44 @@
 /* ----------------- OUR TEAM SECTION ----------------- */
 
 .team {
-  @include mq(tab) {
-    display: flex;
-    gap: 30px;
-
-    @include mq(tab-only) {
-      flex-wrap: wrap;
-    }
-  }
+  display: flex;
+  gap: 30px;
 
   &__item {
     background: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
-    @include mq(mob-only) {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
-    }
-
-    @include mq(tab-only) {
-      width: calc((100% - 30px) / 2);
-    }
   }
-
   &__content {
     padding: 30px 0;
   }
-
   &__name {
     margin-bottom: 10px;
     text-align: center;
     @include fonts(500, 16, 19, 0.03);
     color: var(--secondary-text-color);
   }
-
   &__text {
     margin-bottom: 16px;
     text-align: center;
     @include fonts(null, 16, 19, 0.03);
+  }
+  &__social-list {
+    @extend %flexed;
+    gap: 10px;
+  }
+  &__social-link {
+    @extend %flexed;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-color);
+    @include transition(background-color, fill);
+
+    &:hover,
+    &:focus {
+      background-color: var(--site-accent-color);
+      fill: var(--primary-white-color);
+    }
   }
 }

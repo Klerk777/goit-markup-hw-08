@@ -5,7 +5,7 @@
   padding: 118px 0;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../../img/Studio/Hero/hero-bg-mob.jpg);
+    url(../img/Studio/Hero/hero-bg-mob.jpg);
   background-color: var(--primary-bg-color);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,24 +15,23 @@
 
   @include mq(retina) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../img/Studio/Hero/hero-bg-mob-2x.jpg);
+      url(../img/Studio/Hero/hero-bg-mob-2x.jpg);
   }
 
   @include mq(tab) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../img/Studio/Hero/hero-bg-tablet.jpg);
+      url(../img/Studio/Hero/hero-bg-tablet.jpg);
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../img/Studio/Hero/hero-bg-tablet-2x.jpg);
+        url(../img/Studio/Hero/hero-bg-tablet-2x.jpg);
     }
   }
   @include mq(desk) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../img/Studio/Hero/hero-bg.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Studio/Hero/hero-bg.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../img/Studio/Hero/hero-bg-2x.jpg);
+        url(../img/Studio/Hero/hero-bg-2x.jpg);
     }
   }
 

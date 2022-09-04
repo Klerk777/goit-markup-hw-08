@@ -38,3 +38,7 @@
   position: relative;
   overflow: hidden;
 }
+body.not-scroll {
+  overflow: hidden;
+  height: 100%;
+}

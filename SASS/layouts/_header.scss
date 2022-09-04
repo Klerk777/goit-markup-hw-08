@@ -64,7 +64,7 @@
     align-items: center;
   }
 
-  @include mq(small) {
+  @include mq(pre-tab) {
     position: fixed;
     z-index: 2;
     flex-direction: column;
@@ -72,21 +72,22 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 24px 20px;
-  }
-
-  @include mq(mob-only) {
     padding: 48px 40px;
+
+    background-color: var(--primary-white-color);
+
+    transform-origin: top;
+    transform: translateY(-100%);
+    @include transition(transform);
+
+    &.is-open {
+      transform: translateY(100%);
+    }
   }
-
-  background-color: var(--primary-white-color);
-
-  transform-origin: top;
-  transform: translateY(-100%);
-  @include transition(transform);
-
-  &.is-open {
-    transform: translateY(100%);
+}
+.menu-container.is-open {
+  @include mq(pre-mob) {
+    padding: 24px 20px;
   }
 }
 

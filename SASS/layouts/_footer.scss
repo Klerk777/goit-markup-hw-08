@@ -62,7 +62,7 @@
 /* --------- Social links -------- */
 
 .footer-social {
-  @include mq(mob-only) {
+  @include mq(pre-tab) {
     margin: 60px auto;
   }
 

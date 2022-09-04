@@ -7,11 +7,11 @@
     height: 80px;
     display: flex;
     align-items: center;
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       justify-content: space-between;
     }
 
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       height: 60px;
     }
   }
@@ -63,7 +63,8 @@
   @include mq(tab) {
     align-items: center;
   }
-  @include mq(mob-only) {
+
+  @include mq(small) {
     position: fixed;
     z-index: 2;
     flex-direction: column;
@@ -71,23 +72,27 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    padding: 24px 20px;
+  }
+
+  @include mq(mob-only) {
     padding: 48px 40px;
+  }
 
-    background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 
-    transform-origin: top;
-    transform: translateY(-100%);
-    @include transition(transform);
+  transform-origin: top;
+  transform: translateY(-100%);
+  @include transition(transform);
 
-    &.is-open {
-      transform: translateY(100%);
-    }
+  &.is-open {
+    transform: translateY(100%);
   }
 }
 
 /* -------Site nav------- */
 .site-nav {
-  @include mq(mob-only) {
+  @include mq(pre-tab) {
     margin-bottom: auto;
   }
   @include mq(tab) {
@@ -110,6 +115,9 @@
 
     @include transition(color);
 
+    @include mq(pre-mob) {
+      @include fonts(500, 32, 37, 0.02);
+    }
     @include mq(tab) {
       padding: 32px 0px;
       @include fonts(500, 14, 16, 0.02);
@@ -125,7 +133,7 @@
   }
   &__item {
     position: relative;
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       &:not(:last-child) {
         margin-bottom: 32px;
       }
@@ -164,7 +172,7 @@
     gap: 50px;
   }
   &__item {
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       &:last-child {
         margin-bottom: 32px;
       }
@@ -172,14 +180,22 @@
   }
 
   &__mail-link {
+    @include mq(pre-mob) {
+      @include fonts(500, 19, 22, 0.02);
+      color: var(--primary-text-color);
+    }
     @include mq(mob-only) {
       @include fonts(500, 24, 28, 0.02);
       color: var(--primary-text-color);
     }
   }
   &__tel-link {
+    @include mq(pre-mob) {
+      @include fonts(500, 24, 30, 0.02);
+      color: var(--site-accent-color);
+    }
     @include mq(mob-only) {
-      @include fonts(500, 34, 40, 0.02);
+      @include fonts(500, 32, 38, 0.02);
       color: var(--site-accent-color);
     }
   }
@@ -203,7 +219,7 @@
     }
   }
   &__icon {
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       display: none;
     }
     margin-right: 10px;
@@ -219,19 +235,34 @@
   display: flex;
   margin-top: 64px;
 
+  @include mq(pre-mob) {
+    margin-top: 48px;
+  }
+
   @include mq(tab) {
     display: none;
   }
 
   &__item {
-    @include fonts(500, 18, 22, 0.02);
+    @include fonts(500, 15, 17, 0.02);
 
     &:not(:last-child) {
-      padding-right: 10px;
+      padding-right: 5px;
       border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
     &:not(:first-child) {
-      padding-left: 10px;
+      padding-left: 5px;
+    }
+    @include mq(mob-only) {
+      @include fonts(500, 18, 22, 0.02);
+
+      &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+      }
+      &:not(:first-child) {
+        padding-left: 10px;
+      }
     }
   }
   &__link {

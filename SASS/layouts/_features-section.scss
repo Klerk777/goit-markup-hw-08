@@ -9,7 +9,7 @@
 
   &__item {
     &:not(:last-child) {
-      @include mq(mob-only) {
+      @include mq(pre-tab) {
         margin-bottom: 30px;
       }
     }
@@ -33,7 +33,7 @@
     @include fonts(700, 14, 16, 0.03, uppercase);
     color: var(--secondary-text-color);
 
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       text-align: center;
     }
   }

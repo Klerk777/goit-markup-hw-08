@@ -85,11 +85,6 @@
   $tab: 768px;
   $desk: 1200px;
 
-  @if $type == "pre-small" {
-    @media screen and (max-width: #{$small - 1}) {
-      @content;
-    }
-  }
   @if $type == "small" {
     @media screen and (min-width: $small) {
       @content;
@@ -101,12 +96,17 @@
     }
   }
   @if $type == "mob-only" {
-    @media screen and (max-width: #{$tab - 1}) {
+    @media screen and (min-width: $mob) and (max-width: #{$tab - 1}) {
       @content;
     }
   }
   @if $type == "mob" {
     @media screen and (min-width: $mob) {
+      @content;
+    }
+  }
+  @if $type == "pre-tab" {
+    @media screen and (max-width: #{$tab - 1}) {
       @content;
     }
   }

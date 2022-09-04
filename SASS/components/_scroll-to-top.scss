@@ -32,7 +32,7 @@
     fill: var(--secondary-text-color);
   }
 
-  @include mq(mob-only) {
+  @include mq(pre-tab) {
     &.is-open {
       display: none;
     }

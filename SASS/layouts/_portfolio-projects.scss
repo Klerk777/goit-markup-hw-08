@@ -14,7 +14,7 @@
     flex-grow: 1;
   }
   &__item {
-    @include mq(mob-only) {
+    @include mq(pre-tab) {
       &:not(:last-child) {
         margin-bottom: 30px;
       }

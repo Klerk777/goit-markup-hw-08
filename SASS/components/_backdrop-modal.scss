@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   @include transition(opacity);
 
-  @include mq(mob-only) {
+  @include mq(pre-tab) {
     padding: 93px 15px;
   }
 

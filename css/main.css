@@ -574,7 +574,12 @@ body.not-scroll {
 .site-nav__item {
   position: relative;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -745,13 +750,38 @@ body.not-scroll {
   margin: 0 auto;
   padding: 118px 0;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg-mob.jpg);
   background-color: var(--primary-bg-color);
-  background-size: 1600px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px var(--box-shadow);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg-tablet-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/Studio/Hero/hero-bg-2x.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {

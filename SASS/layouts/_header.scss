@@ -134,7 +134,12 @@
   }
   &__item {
     position: relative;
-    @include mq(pre-tab) {
+    @include mq(pre-mob) {
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+    @include mq(mob-only) {
       &:not(:last-child) {
         margin-bottom: 32px;
       }

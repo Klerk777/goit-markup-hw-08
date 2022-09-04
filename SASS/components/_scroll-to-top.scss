@@ -1,3 +1,5 @@
+/* --------------------- SCROLL TO TOP -------------------- */
+
 .scroll-to-top {
   position: fixed;
   right: 32px;
@@ -6,10 +8,17 @@
   height: 48px;
   @extend %flexed;
   border-radius: 50%;
-  opacity: 0.85;
+  opacity: 0.75;
   background-color: var(--site-accent-color);
   animation: slide-top 1s linear 2s infinite alternate both;
   @include transition(opacity);
+
+  @include mq(pre-mob) {
+    right: 28px;
+  }
+  @include mq(desk) {
+    right: 48px;
+  }
 
   &:hover {
     opacity: 1;
@@ -21,5 +30,11 @@
 
   &:hover &__icon {
     fill: var(--secondary-text-color);
+  }
+
+  @include mq(mob-only) {
+    &.is-open {
+      display: none;
+    }
   }
 }

@@ -64,7 +64,7 @@
 // -------------TRANSITION MIXIN --------------
 @mixin transition($property, $sproperty: false, $tproperty: false) {
   $duration: var(--dur-time);
-  $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  $timing-function: var(--bezier);
 
   @if $sproperty {
     @if $tproperty {

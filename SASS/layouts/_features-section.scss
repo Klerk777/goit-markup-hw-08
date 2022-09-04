@@ -4,7 +4,7 @@
   @include mq(tab) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
+    gap: 57px 30px;
   }
 
   &__item {
@@ -15,11 +15,8 @@
     }
     @include mq(tab-only) {
       flex-basis: calc((100% - 30px) / 2);
-
-      &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: 57px;
-      }
     }
+
     @include mq(desk) {
       flex-basis: calc((100% - 90px) / 4);
     }

@@ -29,14 +29,10 @@
     }
   }
   &__link {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     @include transition(box-shadow);
-
-    &:first-child {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
   }
   &__link:hover,
   &__link:focus {
